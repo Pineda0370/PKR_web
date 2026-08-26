@@ -18,8 +18,10 @@
 <meta name="twitter:description" content="Páginas web modernas para negocios locales. Dominio propio, WhatsApp integrado y mantenimiento.">
 <meta name="twitter:image" content="https://pkr-web.netlify.app/og-image.jpg">
 
-<!-- Favicon (SVG inline, monograma PKR sobre fondo oscuro) -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0f'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-weight='700' font-size='26' fill='%237d9bff' text-anchor='middle'%3EPK%3C/text%3E%3C/svg%3E">
+<!-- Favicon (basado en el chevron azul de tu logo real) -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" href="/favicon-512.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,8 +61,8 @@
     border-bottom:1px solid var(--line);
   }
   nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1120px;margin:0 auto;position:relative;}
-  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;letter-spacing:-0.01em;}
-  .logo span{color:var(--blue-glow);}
+  .logo{display:inline-flex;align-items:center;}
+  .logo img{display:block;width:auto;}
   .nav-links{display:flex;align-items:center;gap:32px;font-size:0.9rem;color:var(--muted);}
   .nav-links a:hover{color:var(--white);}
   .nav-cta{
@@ -226,7 +228,9 @@
   .demo-visual .mock-btn{
     align-self:flex-start;background:var(--blue);color:#fff;font-size:0.78rem;font-weight:600;
     padding:9px 16px;border-radius:6px;margin-top:6px;
+    transition:background .15s ease, transform .15s ease;
   }
+  .demo-visual .mock-btn:hover{background:#3f6bff;transform:translateY(-1px);}
   .demo-copy{padding:34px;display:flex;flex-direction:column;justify-content:center;gap:14px;flex:1;}
   .demo-copy p{color:var(--muted);line-height:1.65;font-size:0.94rem;}
   .demo-copy a.demo-link{display:inline-flex;align-items:center;gap:8px;margin-top:auto;color:var(--blue-glow);font-weight:600;font-size:0.9rem;}
@@ -255,7 +259,7 @@
 
 <header>
   <nav>
-    <div class="logo">P<span>KR</span></div>
+    <a href="#" class="logo"><img src="/pkr-wordmark-light.png" alt="PKR — Desarrollo web y soluciones digitales" height="22"></a>
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
       <span></span>
     </button>
@@ -387,7 +391,7 @@
           <div class="tag">DEMO 01</div>
           <h3>Barbería</h3>
           <p style="color:var(--muted);line-height:1.5">Servicios, horarios y contacto directo para conseguir citas.</p>
-          <span class="mock-btn">Ver demo →</span>
+          <a class="mock-btn" href="demo-barberia.html" target="_blank" rel="noopener">Ver demo →</a>
         </div>
         <div class="demo-copy">
           <p>Una página enfocada en mostrar servicios y facilitar que el cliente contacte al negocio rápidamente por WhatsApp.</p>
@@ -400,7 +404,7 @@
           <div class="tag">DEMO 02</div>
           <h3>Restaurante</h3>
           <p style="color:var(--muted);line-height:1.5">Menú, ubicación, horarios y pedidos en una experiencia clara.</p>
-          <span class="mock-btn">Ver demo →</span>
+          <a class="mock-btn" href="demo-restaurante.html" target="_blank" rel="noopener">Ver demo →</a>
         </div>
         <div class="demo-copy">
           <p>Pensado para negocios que necesitan presentar su oferta y convertir visitas en pedidos o reservaciones.</p>
@@ -413,7 +417,7 @@
           <div class="tag">DEMO 03</div>
           <h3>Gimnasio</h3>
           <p style="color:var(--muted);line-height:1.5">Clases, horarios y membresías con inscripción directa.</p>
-          <span class="mock-btn">Ver demo →</span>
+          <a class="mock-btn" href="demo-gimnasio.html" target="_blank" rel="noopener">Ver demo →</a>
         </div>
         <div class="demo-copy">
           <p>Ideal para negocios con horarios y planes que cambian seguido, y que necesitan que se vean claros de inmediato.</p>
@@ -434,7 +438,7 @@
 </section>
 
 <footer>
-  <div class="logo">P<span style="color:var(--blue-glow)">KR</span></div>
+  <div class="logo"><img src="/pkr-wordmark-light.png" alt="PKR" height="20"></div>
   PKR · Diseño y desarrollo web
 </footer>
 
