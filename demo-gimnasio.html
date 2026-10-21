@@ -1,164 +1,395 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es-MX">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gimnasio Fuerza Coacalco</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gimnasio Fuerza Coacalco | Pesas, funcional, spinning, box y yoga</title>
+<meta name="description" content="Gimnasio de barrio en Coacalco: pesas, funcional y clases grupales todos los días. Pase diario $50, mensualidad $399. Elige tu plan e inscríbete por WhatsApp.">
+<meta property="og:title" content="Gimnasio Fuerza Coacalco">
+<meta property="og:description" content="Entrena donde eres barrio. Elige tu plan e inscríbete por WhatsApp en un minuto.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta name="theme-color" content="#0d0f10">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthClub",
+  "name": "Gimnasio Fuerza Coacalco",
+  "priceRange": "$50 - $999",
+  "address": { "@type": "PostalAddress", "addressLocality": "Coacalco de Berriozábal", "addressRegion": "Estado de México", "addressCountry": "MX" }
+}
+</script>
 <style>
 :root{
-  --azul:#132A44;
-  --azul-2:#1B3A5C;
-  --mostaza:#F0A93C;
-  --white:#F5F6FA;
-  --line:rgba(245,246,250,0.14);
+  --bg:#0d0f10; --bg2:#14171a; --card:#1a1e22; --line:#2b3036;
+  --text:#f2f4f5; --muted:#9aa4ad; --lime:#c6ff3d; --lime2:#dcff7a; --orange:#ff6a1f; --red:#ff4d4d;
+  --r:14px;
 }
-*{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:var(--azul);color:var(--white);font-family:'Work Sans',sans-serif;overflow-x:hidden;}
-@media (prefers-reduced-motion: reduce){*{animation-duration:0.001ms !important;transition-duration:0.001ms !important;}}
-a{color:inherit;text-decoration:none;}
-:focus-visible{outline:3px solid var(--mostaza);outline-offset:2px;}
-.wrap{max-width:980px;margin:0 auto;padding:0 24px;}
-.display{font-family:'Archivo Black',sans-serif;text-transform:uppercase;}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--text);font-family:'Barlow',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;padding-bottom:84px}
+h1,h2,h3{font-family:'Barlow Condensed',Impact,sans-serif;font-weight:800;text-transform:uppercase;line-height:1;letter-spacing:.01em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+section{padding:70px 0}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin-bottom:10px}
+h2{font-size:clamp(2.1rem,6vw,3.2rem);margin-bottom:12px}
+.sub{color:var(--muted);max-width:540px;margin-bottom:34px}
 
-header{position:sticky;top:0;z-index:50;background:rgba(19,42,68,0.92);backdrop-filter:blur(8px);border-bottom:3px solid var(--mostaza);}
-nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:980px;margin:0 auto;}
-.logo{font-family:'Archivo Black',sans-serif;font-size:1.15rem;text-transform:uppercase;letter-spacing:0.01em;}
-.logo span{color:var(--mostaza);}
-.nav-links{display:flex;gap:26px;font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;opacity:0.8;}
-@media (max-width:640px){.nav-links{display:none;}}
-.nav-cta{background:var(--mostaza);color:var(--azul);padding:10px 18px;border-radius:4px;font-size:0.82rem;font-weight:800;text-transform:uppercase;}
+header{position:sticky;top:0;z-index:50;background:rgba(13,15,16,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.5rem;letter-spacing:.06em;text-transform:uppercase}
+.logo span{color:var(--lime)}
+.nav nav{display:flex;gap:22px;align-items:center;font-weight:500;font-size:.95rem;color:var(--muted)}
+.nav nav a:hover{color:var(--text)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--lime);color:#10150a;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:.06em;text-transform:uppercase;padding:13px 26px;border-radius:6px;border:0;cursor:pointer;transform:skewX(-8deg);transition:background .15s,transform .15s}
+.btn > *{display:inline-block;transform:skewX(8deg)}
+.btn:hover{background:var(--lime2);transform:skewX(-8deg) translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--text);border:2px solid var(--line)}
+.btn.ghost:hover{border-color:var(--lime);background:transparent}
+.btn.sm{padding:8px 16px;font-size:1rem}
+@media(max-width:640px){.nav nav a.hide-m{display:none}}
+:focus-visible{outline:3px solid var(--lime);outline-offset:2px}
 
-.hero{padding:90px 24px 70px;text-align:center;background:
-  linear-gradient(rgba(19,42,68,0.55), rgba(19,42,68,0.85)),
-  repeating-linear-gradient(-45deg, rgba(240,169,60,0.06) 0 18px, transparent 18px 36px);
+/* hero */
+.hero{padding:70px 0 60px;position:relative;overflow:hidden;background:
+  linear-gradient(115deg,transparent 58%,rgba(198,255,61,.09) 58%,rgba(198,255,61,.09) 74%,transparent 74%),
+  radial-gradient(700px 360px at 85% 10%,rgba(255,106,31,.14),transparent 65%)}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);padding:6px 14px;border-radius:999px;font-size:.85rem}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--muted)}
+.badge.open .dot{background:var(--lime);box-shadow:0 0 0 4px rgba(198,255,61,.2)}
+.badge.closed .dot{background:var(--red)}
+.hero h1{font-size:clamp(3.2rem,12vw,7rem);margin-bottom:18px;max-width:720px}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:500px;margin-bottom:28px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.today{margin-top:38px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--lime);border-radius:var(--r);padding:16px 20px;max-width:560px}
+.today b{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.1em;color:var(--lime);font-size:.95rem}
+.today ul{list-style:none;margin-top:8px}
+.today li{display:flex;gap:14px;padding:4px 0;font-size:.98rem}
+.today li time{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;min-width:70px;color:var(--text)}
+.today li span{color:var(--muted)}
+
+/* schedule */
+.sched{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.sched th,.sched td{padding:13px 8px;text-align:center;border-bottom:1px solid var(--line)}
+.sched tr:last-child td{border-bottom:0}
+.sched thead th{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.95rem;color:var(--muted);background:var(--bg2)}
+.sched thead th.now{color:#10150a;background:var(--lime)}
+.sched td.cls{text-align:left;padding-left:16px}
+.sched td.cls b{display:block;font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:1.2rem;letter-spacing:.03em}
+.sched td.cls span{font-size:.82rem;color:var(--muted)}
+.sched td.hr{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;white-space:nowrap}
+.sched td.on::after{content:"";display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--lime)}
+.sched td.off::after{content:"–";color:#3a4148}
+.sched td.now{background:rgba(198,255,61,.07)}
+.sched th .ini{display:none}
+@media(max-width:640px){
+  .sched{table-layout:fixed}
+  .sched th,.sched td{padding:10px 2px;font-size:.78rem}
+  .sched th:nth-child(1),.sched td.hr{width:58px;font-size:.95rem}
+  .sched th:nth-child(n+3),.sched td.on,.sched td.off{width:31px}
+  .sched td.cls{padding-left:8px}
+  .sched td.cls b{font-size:1rem}
+  .sched td.cls span{display:none}
+  .sched thead th:nth-child(2){padding-left:8px!important}
+  .sched th .full{display:none}
+  .sched th .ini{display:inline}
+  .logo{font-size:1.2rem;white-space:nowrap}
+  .nav .btn.sm{padding:8px 12px}
+  .logo{letter-spacing:.03em}
 }
-.hero .kicker{font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--mostaza);font-size:0.85rem;margin-bottom:16px;}
-.hero h1{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(2.6rem,7vw,4.6rem);line-height:0.98;margin-bottom:20px;}
-.hero p{opacity:0.75;max-width:460px;margin:0 auto 32px;line-height:1.6;}
-.btn-primary{display:inline-block;background:var(--mostaza);color:var(--azul);padding:16px 32px;border-radius:5px;font-weight:800;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.02em;}
-.btn-primary:hover{background:#ffbb54;}
+.legend{font-size:.82rem;color:var(--muted);margin-top:12px}
 
-section{padding:70px 24px;}
-.section-head{text-align:center;max-width:540px;margin:0 auto 44px;}
-.section-head .kicker{font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--mostaza);font-size:0.8rem;margin-bottom:8px;}
-h2{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:clamp(1.8rem,4vw,2.5rem);}
+.nav{gap:12px}
 
-.horarios{background:var(--azul-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-.clases{max-width:760px;margin:0 auto;display:grid;gap:2px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;}
-.clase-row{display:grid;grid-template-columns:110px 1fr 90px;gap:14px;background:var(--azul-2);padding:16px 20px;align-items:center;}
-.clase-row .c-time{font-family:'Archivo Black',sans-serif;font-size:0.85rem;color:var(--mostaza);}
-.clase-row .c-name{font-weight:700;}
-.clase-row .c-desc{font-size:0.8rem;opacity:0.6;margin-top:2px;}
-.clase-row .c-days{font-size:0.75rem;opacity:0.65;text-align:right;text-transform:uppercase;letter-spacing:0.03em;}
-@media (max-width:560px){.clase-row{grid-template-columns:1fr;text-align:left;gap:4px;}.clase-row .c-days{text-align:left;}}
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.plans{grid-template-columns:1fr}}
+.plan{position:relative;display:block;cursor:pointer}
+.plan input{position:absolute;opacity:0;inset:0;width:100%;height:100%;cursor:pointer}
+.plan .in{height:100%;background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:26px 22px;transition:border-color .15s,background .15s,transform .15s}
+.plan:hover .in{border-color:#4a535c}
+.plan input:checked + .in{border-color:var(--lime);background:#1d2412;transform:translateY(-3px)}
+.plan input:focus-visible + .in{outline:3px solid var(--lime);outline-offset:2px}
+.plan h3{font-size:1.5rem;margin-bottom:6px}
+.price{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:3rem;line-height:1;color:var(--lime)}
+.price small{font-size:1.1rem;color:var(--muted);font-weight:600}
+.plan p{color:var(--muted);font-size:.95rem;margin-top:12px}
+.save{display:inline-block;margin-top:12px;background:var(--orange);color:#1a0b00;font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:.9rem;padding:3px 10px;border-radius:4px}
+.pop{position:absolute;top:-12px;right:16px;background:var(--lime);color:#10150a;font-family:'Barlow Condensed',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;padding:3px 10px;border-radius:4px;z-index:1}
 
-.membresias{text-align:center;}
-.mem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:820px;margin:0 auto;}
-@media (max-width:760px){.mem-grid{grid-template-columns:1fr;}}
-.mem-card{background:var(--azul-2);border:1px solid var(--line);border-radius:10px;padding:28px 22px;text-align:left;}
-.mem-card.destacado{border-color:var(--mostaza);}
-.mem-name{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:1rem;margin-bottom:6px;}
-.mem-price{font-family:'Archivo Black',sans-serif;font-size:1.8rem;color:var(--mostaza);margin-bottom:4px;}
-.mem-price sup{font-size:0.7rem;color:var(--white);opacity:0.6;}
-.mem-desc{font-size:0.82rem;opacity:0.65;line-height:1.5;}
+.join{margin-top:26px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px 16px;align-items:end}
+@media(max-width:760px){.join{grid-template-columns:1fr}}
+.join label{display:block;font-size:.82rem;color:var(--muted);margin-bottom:5px}
+.join input[type=text],.join select{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:12px 14px;font:inherit}
+.join .full{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px dashed var(--line);padding-top:16px}
+.join .sum{font-size:1rem}
+.join .sum b{font-family:'Barlow Condensed',sans-serif;font-size:1.7rem;color:var(--lime);margin-left:6px}
+.note{font-size:.8rem;color:var(--muted);margin-top:10px}
 
-.contacto{text-align:center;background:linear-gradient(180deg, transparent, rgba(240,169,60,0.08));}
-.contacto p{opacity:0.75;max-width:440px;margin:12px auto 30px;line-height:1.6;}
-.whats-btn{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#0a0a0f;font-weight:700;padding:16px 30px;border-radius:6px;font-size:1rem;}
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:820px){.revs{grid-template-columns:1fr}}
+.rev{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.stars{color:var(--lime);letter-spacing:3px;margin-bottom:8px}
+.rev p{margin-bottom:10px}
+.rev small{color:var(--muted)}
+.hint{font-size:.8rem;color:var(--muted);margin-top:12px}
 
-footer{padding:26px 24px;text-align:center;font-size:0.78rem;opacity:0.55;border-top:1px solid var(--line);}
-.pkr-credit{display:inline-block;margin-top:8px;font-size:0.72rem;opacity:0.75;border:1px solid var(--line);padding:4px 10px;border-radius:999px;}
-.pkr-credit:hover{opacity:1;border-color:var(--mostaza);}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.hrow{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line)}
+.hrow:last-child{border:0}
+.hrow.today-row{color:var(--lime);font-weight:600}
+.map{margin-top:14px;aspect-ratio:16/10;border-radius:10px;border:1px dashed var(--line);display:grid;place-items:center;color:var(--muted);font-size:.85rem;text-align:center;padding:12px;background:var(--bg2)}
+
+details{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 20px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--lime);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:8px}
+
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem}
+.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.foot a{color:var(--lime)}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(13,15,16,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:11px 16px;display:flex}
+.sticky .btn{flex:1}
+@media(min-width:900px){.sticky{display:none}body{padding-bottom:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.plan .in{transition:none}}
 </style>
 </head>
 <body>
-
 <header>
-  <nav>
-    <div class="logo">FUERZA <span>COACALCO</span></div>
-    <div class="nav-links">
-      <a href="#horarios">Clases</a>
-      <a href="#membresias">Membresías</a>
-    </div>
-    <a class="nav-cta" href="#contacto">Inscribirme</a>
-  </nav>
+  <div class="wrap nav">
+    <a href="#top" class="logo">Fuerza <span>Coacalco</span></a>
+    <nav>
+      <a href="#clases" class="hide-m">Clases</a>
+      <a href="#membresias" class="hide-m">Membresías</a>
+      <a href="#membresias" class="btn sm"><span>Inscribirme</span></a>
+    </nav>
+  </div>
 </header>
 
+<main id="top">
 <section class="hero">
-  <div class="kicker">Gimnasio · Coacalco</div>
-  <h1 class="display">Entrena<br>donde eres barrio</h1>
-  <p>Pesas, funcional y clases grupales todos los días. Sin letra chiquita: inscríbete cuando quieras, cancela cuando quieras.</p>
-  <a class="btn-primary" href="#contacto">Quiero inscribirme</a>
-</section>
-
-<section class="horarios" id="horarios">
-  <div class="section-head">
-    <div class="kicker">Clases grupales</div>
-    <h2 style="color:var(--white);">Horario de la semana</h2>
-  </div>
   <div class="wrap">
-    <div class="clases">
-      <div class="clase-row">
-        <div class="c-time">7:00 AM</div>
-        <div><div class="c-name">Funcional</div><div class="c-desc">Circuito de alta intensidad</div></div>
-        <div class="c-days">Lun–Vie</div>
-      </div>
-      <div class="clase-row">
-        <div class="c-time">9:00 AM</div>
-        <div><div class="c-name">Spinning</div><div class="c-desc">Cardio en bici, todos los niveles</div></div>
-        <div class="c-days">Lun / Mié / Vie</div>
-      </div>
-      <div class="clase-row">
-        <div class="c-time">6:00 PM</div>
-        <div><div class="c-name">Box fitness</div><div class="c-desc">Técnica de box + acondicionamiento</div></div>
-        <div class="c-days">Mar / Jue</div>
-      </div>
-      <div class="clase-row">
-        <div class="c-time">8:00 PM</div>
-        <div><div class="c-name">Yoga</div><div class="c-desc">Flexibilidad y recuperación</div></div>
-        <div class="c-days">Lun–Sáb</div>
-      </div>
+    <div class="badges">
+      <div class="badge" id="status"><span class="dot"></span><span id="statusText">Revisando horario…</span></div>
+    </div>
+    <h1>Entrena donde <em>eres barrio.</em></h1>
+    <p class="lead">Pesas, funcional y clases grupales todos los días. Elige tu plan, inscríbete por WhatsApp y empieza hoy.</p>
+    <div class="cta-row">
+      <a href="#membresias" class="btn"><span>Quiero inscribirme</span></a>
+      <a href="#clases" class="btn ghost"><span>Ver clases</span></a>
+    </div>
+    <div class="today" id="todayBox">
+      <b id="todayTitle">Clases de hoy</b>
+      <ul id="todayList"></ul>
     </div>
   </div>
 </section>
 
-<section class="membresias" id="membresias">
-  <div class="section-head">
-    <div class="kicker">Membresías</div>
+<section id="clases" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="eyebrow">Horario semanal</div>
+    <h2>Clases grupales</h2>
+    <p class="sub">Todas incluidas con tu mensualidad o trimestre. El día de hoy va resaltado.</p>
+    <table class="sched" id="sched" aria-label="Horario semanal de clases">
+      <thead></thead><tbody></tbody>
+    </table>
+    <p class="legend">● hay clase &nbsp;·&nbsp; Domingo sin clases.</p>
+  </div>
+</section>
+
+<section id="membresias">
+  <div class="wrap">
+    <div class="eyebrow">Membresías</div>
     <h2>Elige tu plan</h2>
+    <p class="sub">Sin letras chiquitas. Toca el plan que quieres y te armamos el mensaje para inscribirte.</p>
+    <div class="plans" id="plans" role="radiogroup" aria-label="Plan de membresía"></div>
+
+    <div class="join">
+      <div><label for="nombre">Tu nombre</label><input type="text" id="nombre" placeholder="Ej. Carlos" autocomplete="given-name"></div>
+      <div><label for="meta">Tu objetivo</label>
+        <select id="meta"><option>Condición física</option><option>Bajar de peso</option><option>Ganar masa muscular</option><option>Tomar clases grupales</option><option>Solo conocer el gimnasio</option></select></div>
+      <div><label for="cuando">¿Cuándo quieres empezar?</label>
+        <select id="cuando"><option>Hoy</option><option>Mañana</option><option>Esta semana</option><option>El próximo lunes</option></select></div>
+      <div class="full">
+        <div class="sum">Plan elegido: <span id="planName">—</span><b id="planPrice"></b></div>
+        <a class="btn" id="waBtn" href="#" target="_blank" rel="noopener"><span>Inscribirme por WhatsApp</span></a>
+      </div>
+    </div>
+    <p class="note" id="waNote">Elige un plan para continuar</p>
   </div>
-  <div class="mem-grid">
-    <div class="mem-card">
-      <div class="mem-name">Pase diario</div>
-      <div class="mem-price">$50<sup>/día</sup></div>
-      <div class="mem-desc">Acceso a área de pesas y funcional por un día.</div>
+</section>
+
+<section style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="eyebrow">Socios</div>
+    <h2>Lo que dicen en el barrio</h2>
+    <p class="sub">&nbsp;</p>
+    <div class="revs">
+      <div class="rev"><div class="stars">★★★★★</div><p>Llegué sin saber nada y los entrenadores me explicaron cada máquina. Ambiente de barrio, sin miradas raras.</p><small>— Jorge T.</small></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>El funcional de las 7am me cambió la semana. Precio justo y siempre hay lugar.</p><small>— Mariana C.</small></div>
+      <div class="rev"><div class="stars">★★★★★</div><p>Me inscribí por WhatsApp en un minuto y esa misma tarde ya estaba entrenando.</p><small>— Luis E.</small></div>
     </div>
-    <div class="mem-card destacado">
-      <div class="mem-name">Mensualidad</div>
-      <div class="mem-price">$399<sup>/mes</sup></div>
-      <div class="mem-desc">Acceso ilimitado + todas las clases grupales incluidas.</div>
-    </div>
-    <div class="mem-card">
-      <div class="mem-name">Trimestre</div>
-      <div class="mem-price">$999<sup>/3 meses</sup></div>
-      <div class="mem-desc">Lo mismo que la mensualidad, con descuento por pago adelantado.</div>
+    <p class="hint">Demo: reseñas de ejemplo. Se reemplazan por las reales del negocio.</p>
+  </div>
+</section>
+
+<section id="info">
+  <div class="wrap">
+    <div class="eyebrow">Horario y ubicación</div>
+    <h2>Ven a conocernos</h2>
+    <p class="sub">&nbsp;</p>
+    <div class="two">
+      <div class="box" id="hours"></div>
+      <div class="box">
+        <b>Gimnasio Fuerza Coacalco</b>
+        <p style="color:var(--muted)">Coacalco de Berriozábal, Estado de México</p>
+        <div class="map">Aquí va el mapa de Google con la dirección exacta del gimnasio</div>
+        <a class="btn ghost sm" style="margin-top:14px" href="https://www.google.com/maps/search/?api=1&query=Gimnasio+Coacalco+de+Berriozabal" target="_blank" rel="noopener"><span>Cómo llegar</span></a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="contacto" id="contacto">
-  <h2 class="display" style="font-size:1.8rem;">¿Listo para empezar?</h2>
-  <p>Escríbenos y te apartamos tu lugar para la próxima clase, sin compromiso.</p>
-  <a class="whats-btn" href="https://wa.me/" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+<section style="padding-top:0">
+  <div class="wrap" style="max-width:760px">
+    <div class="eyebrow">Dudas rápidas</div>
+    <h2>Preguntas frecuentes</h2>
+    <p class="sub">&nbsp;</p>
+    <details><summary>¿Puedo probar antes de inscribirme?</summary><p>Sí. El pase diario te da acceso a pesas y funcional por un día, sin compromiso.</p></details>
+    <details><summary>¿El pase diario incluye clases?</summary><p>No. Las clases grupales están incluidas en la mensualidad y el trimestre.</p></details>
+    <details><summary>¿Puedo cancelar cuando quiera?</summary><p>Sí, la mensualidad es mes a mes. Pregúntanos por WhatsApp si tienes dudas sobre tu plan.</p></details>
+    <details><summary>¿Qué necesito llevar?</summary><p>Ropa cómoda, tenis, una toalla y tu botella de agua. Si vas a tomar yoga, tu tapete o rentamos uno.</p></details>
+  </div>
 </section>
+</main>
 
 <footer>
-  Gimnasio Fuerza Coacalco · Coacalco, Edo. de México
-  <br>
-  <a class="pkr-credit" href="index.html">Página hecha por PKR ↗</a>
+  <div class="wrap foot">
+    <span>Gimnasio Fuerza Coacalco · Coacalco, Edo. de México</span>
+    <a href="https://pkr-web.netlify.app/">Página hecha por PKR ↗ · ¿Quieres una así para tu negocio?</a>
+  </div>
 </footer>
+
+<div class="sticky"><a href="#membresias" class="btn"><span>Quiero inscribirme</span></a></div>
+
+<script>
+/* ====== CONFIG (cambiar por cliente) ====== */
+const WA_NUMBER = "525548635816";   // número demo: sustituir por el del gimnasio
+const NEGOCIO   = "Fuerza Coacalco";
+// Horario del gimnasio por día (0=Dom ... 6=Sáb): [abre, cierra] o null  ← supuesto de demo
+const HORARIO = {0:null,1:[6,22],2:[6,22],3:[6,22],4:[6,22],5:[6,22],6:[7,21]};
+// Clases: días 1=Lun ... 6=Sáb, 0=Dom
+const CLASES = [
+  {h:"7:00 AM", hh:7,  n:"Funcional",  d:"Circuito de alta intensidad", dias:[1,2,3,4,5]},
+  {h:"9:00 AM", hh:9,  n:"Spinning",   d:"Cardio en bici, todos los niveles", dias:[1,3,5]},
+  {h:"6:00 PM", hh:18, n:"Box fitness",d:"Técnica de box + acondicionamiento", dias:[2,4]},
+  {h:"8:00 PM", hh:20, n:"Yoga",       d:"Flexibilidad y recuperación", dias:[1,2,3,4,5,6]}
+];
+const PLANES = [
+  {id:"dia", n:"Pase diario", p:50,  per:"/día",     d:"Acceso a pesas y funcional por un día. No incluye clases grupales."},
+  {id:"mes", n:"Mensualidad", p:399, per:"/mes",     d:"Acceso ilimitado y todas las clases grupales.", pop:true},
+  {id:"tri", n:"Trimestre",   p:999, per:"/3 meses", d:"Todo lo de la mensualidad, pagando tres meses juntos."}
+];
+/* ========================================== */
+
+const DIAS = ["Dom","Lun","Mar","Mié","Jue","Vie","Sáb"];
+const DIAS_LARGO = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+function nowMX(){
+  const p = new Intl.DateTimeFormat('en-US',{timeZone:'America/Mexico_City',weekday:'short',hour:'numeric',hour12:false}).formatToParts(new Date());
+  const map = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+  return {d:map[p.find(x=>x.type==='weekday').value], h:parseInt(p.find(x=>x.type==='hour').value)%24};
+}
+const {d:HOY,h:HORA} = nowMX();
+
+// estado abierto/cerrado
+(function(){
+  const el = document.getElementById('status'), tx = document.getElementById('statusText');
+  const hr = HORARIO[HOY];
+  if(hr && HORA>=hr[0] && HORA<hr[1]){ el.classList.add('open'); tx.textContent = "Abierto ahora · hasta las "+hr[1]+":00"; }
+  else {
+    el.classList.add('closed');
+    let txt = "Cerrado ahora";
+    if(hr && HORA<hr[0]) txt += " · abrimos hoy a las "+hr[0]+":00";
+    else for(let i=1;i<=7;i++){ const x=(HOY+i)%7; if(HORARIO[x]){ txt += " · abrimos "+(i===1?"mañana":DIAS_LARGO[x].toLowerCase())+" a las "+HORARIO[x][0]+":00"; break; } }
+    tx.textContent = txt;
+  }
+})();
+
+// clases de hoy
+(function(){
+  const list = document.getElementById('todayList'), title = document.getElementById('todayTitle');
+  const hoy = CLASES.filter(c=>c.dias.includes(HOY));
+  title.textContent = "Clases de hoy · "+DIAS_LARGO[HOY];
+  if(!hoy.length){ list.innerHTML = '<li><span>Hoy no hay clases grupales. El gimnasio '+(HORARIO[HOY]?'está abierto para pesas y funcional.':'está cerrado.')+'</span></li>'; return; }
+  list.innerHTML = hoy.map(c=>'<li><time>'+c.h+'</time><b>'+c.n+'</b><span>'+c.d+'</span></li>').join('');
+})();
+
+// tabla semanal (Lun-Sáb)
+(function(){
+  const order = [1,2,3,4,5,6];
+  const th = '<tr><th scope="col">Hora</th><th scope="col" style="text-align:left;padding-left:16px">Clase</th>'+
+    order.map(d=>'<th scope="col"'+(d===HOY?' class="now"':'')+' title="'+DIAS_LARGO[d]+'"><span class="full">'+DIAS[d]+'</span><span class="ini" aria-hidden="true">'+(d===3?'X':DIAS[d][0])+'</span></th>').join('')+'</tr>';
+  document.querySelector('#sched thead').innerHTML = th;
+  document.querySelector('#sched tbody').innerHTML = CLASES.map(c=>
+    '<tr><td class="hr">'+c.h+'</td><td class="cls"><b>'+c.n+'</b><span>'+c.d+'</span></td>'+
+    order.map(d=>'<td class="'+(c.dias.includes(d)?'on':'off')+(d===HOY?' now':'')+'"><span class="sr" style="position:absolute;left:-9999px">'+(c.dias.includes(d)?'Sí':'No')+'</span></td>').join('')+'</tr>'
+  ).join('');
+})();
+
+// horario general
+(function(){
+  const rows = [[ "Lunes – Viernes", [1,2,3,4,5] ],[ "Sábado",[6] ],[ "Domingo",[0] ]];
+  document.getElementById('hours').innerHTML = rows.map(([lbl,ds])=>{
+    const hr = HORARIO[ds[0]];
+    return '<div class="hrow'+(ds.includes(HOY)?' today-row':'')+'"><span>'+lbl+'</span><span>'+(hr? hr[0]+':00 – '+hr[1]+':00':'Cerrado')+'</span></div>';
+  }).join('');
+})();
+
+// planes
+const plansEl = document.getElementById('plans');
+const ahorro = 3*PLANES[1].p - PLANES[2].p;
+const porMes = Math.round(PLANES[2].p/3);
+plansEl.innerHTML = PLANES.map(p=>
+  '<label class="plan">'+(p.pop?'<span class="pop">Más elegido</span>':'')+
+  '<input type="radio" name="plan" value="'+p.id+'"><div class="in">'+
+  '<h3>'+p.n+'</h3><div class="price">$'+p.p+'<small> '+p.per+'</small></div>'+
+  '<p>'+p.d+'</p>'+(p.id==="tri"?'<span class="save">Ahorras $'+ahorro+' · $'+porMes+'/mes</span>':'')+
+  '</div></label>'
+).join('');
+
+const nombre = document.getElementById('nombre'), meta = document.getElementById('meta'), cuando = document.getElementById('cuando');
+const btn = document.getElementById('waBtn'), note = document.getElementById('waNote');
+const planName = document.getElementById('planName'), planPrice = document.getElementById('planPrice');
+function update(){
+  const sel = document.querySelector('input[name=plan]:checked');
+  const plan = sel ? PLANES.find(p=>p.id===sel.value) : null;
+  const quien = nombre.value.trim();
+  let msg = "Hola "+NEGOCIO+(quien?", soy "+quien:"");
+  if(plan){
+    planName.textContent = plan.n; planPrice.textContent = "$"+plan.p+" "+plan.per;
+    msg += ". Me quiero inscribir al plan "+plan.n+" ($"+plan.p+" "+plan.per+"). Mi objetivo: "+meta.value.toLowerCase()+". Quiero empezar: "+cuando.value.toLowerCase()+". ¿Qué necesito llevar?";
+    btn.style.opacity = 1; note.textContent = "Se abre WhatsApp con tu mensaje ya escrito";
+  } else {
+    planName.textContent = "—"; planPrice.textContent = "";
+    msg += ". Quiero información sobre las membresías.";
+    btn.style.opacity = .85; note.textContent = "Elige un plan para continuar (o escribe directo)";
+  }
+  btn.href = "https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(msg);
+}
+document.querySelectorAll('input[name=plan]').forEach(r=>r.addEventListener('change',update));
+[nombre,meta,cuando].forEach(e=>e.addEventListener('input',update));
+update();
+</script>
 </body>
 </html>
